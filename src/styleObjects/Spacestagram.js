@@ -38,17 +38,30 @@ export const styles = {
         }
     },
     apodContainer: {
-        width: '30rem',
-        height: '50rem',
+        width: '45rem',
+        minHeight: '50rem',
         boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px',
-        borderRadius: '5rem',
+        borderRadius: '1rem',
         margin: '3rem 0rem',
     },
     imageStyle: {
-        borderTopLeftRadius: '5rem',
-        borderTopRightRadius: '5rem',
+        borderTopLeftRadius: '1rem',
+        borderTopRightRadius: '1rem',
         objectFit: 'fill',
         width: '100%',
-        height: '20rem',
+        height: '30rem',
+    },
+    titleAndDate: {
+        fontFamily: ['Prompt'],
+        fontSize: '1.5rem',
+        fontWeight: '600',
+        margin: '1rem',
+    },
+    explanationText: {
+        fontFamily: ['Prompt'],
+        fontSize: '0.9rem',
+        margin: '1rem',
+        paddingRight: '1rem',
+        marginBottom: '1rem',
     }
 };

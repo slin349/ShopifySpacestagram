@@ -2,6 +2,7 @@ import { Button, CardMedia, Grid, Link, Typography } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import React, { useEffect, useState } from 'react'
 import { styles } from '../styleObjects/Spacestagram';
+import ApodCard from './ApodCard';
 
 const useStyle = makeStyles(styles);
 
@@ -55,17 +56,7 @@ const Spacestagram = () => {
                 </Grid>
                 {console.log(content, isApodOrMars, 'JEJEJE')}
                 {isApodOrMars && (
-                    <Grid className={classes.apodContainer}>
-                        <Link href={content.url} target='_blank' rel='noopener'>
-                            <CardMedia
-                                component="img"
-                                image={content.hdurl}
-                                alt={content.title}
-                                title={content.title}
-                                className={classes.imageStyle}
-                            />
-                        </Link>
-                    </Grid>
+                    <ApodCard content={content} />
                 )}
             </Grid>
         </Grid>
