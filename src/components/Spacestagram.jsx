@@ -3,7 +3,9 @@ import { makeStyles } from '@mui/styles';
 import React, { useState } from 'react'
 import { styles } from '../styleObjects/Spacestagram';
 import ApodContent from './ApodContent';
+import Footer from './Footer';
 import MarsContent from './MarsContent';
+
 
 const useStyle = makeStyles(styles);
 
@@ -12,10 +14,11 @@ const Spacestagram = () => {
     const [isApodOrMars, setIsApodOrMars] = useState('');
     const [content, setContent] = useState([]);
     const classes = useStyle();
+    const apiKey = process.env.REACT_APP_API_KEY
 
     async function getApod() {
         try {
-            const response = await axios.get('https://api.nasa.gov/planetary/apod?api_key=wU3aYJQjwUJfFNv2ntep0raAs0PwBLUoC2chyska');
+            const response = await axios.get(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}`);
             setContent(response.data);
             setIsApodOrMars('Apod');
         } catch (error) {
@@ -27,7 +30,7 @@ const Spacestagram = () => {
 
     async function getMarsRoverImage() {
         try {
-            const response = await axios.get('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&page=2&api_key=wU3aYJQjwUJfFNv2ntep0raAs0PwBLUoC2chyska');
+            const response = await axios.get(`https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&page=2&api_key=${apiKey}`);
             setContent(response.data);
             setIsApodOrMars('Mars');
         } catch (error) {
@@ -38,7 +41,7 @@ const Spacestagram = () => {
     }
 
     return (
-        <Grid container>
+        <Grid container direction='column'>
             <Grid item xs={10} className={classes.contentContainer}>
                 <Typography className={classes.title}>Spacestagram</Typography>
                 <Typography className={classes.subtitle}>Brought to you by NASA's APIs</Typography>
@@ -56,7 +59,6 @@ const Spacestagram = () => {
                 {isApodOrMars === 'Mars' && (
                     <Typography className={classes.description}>These are pictures taken from the Mars Rover which are fetched from NASA's Mars Rover Photos API</Typography>
                 )}
-                {console.log(content, isApodOrMars, 'JEJEJE')}
                 {isApodOrMars ?
                     isApodOrMars === 'Apod' ?
                         (
@@ -73,6 +75,9 @@ const Spacestagram = () => {
                     :
                     ''
                 }
+            </Grid>
+            <Grid item>
+                <Footer />
             </Grid>
         </Grid>
     );

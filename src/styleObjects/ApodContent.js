@@ -64,7 +64,7 @@ export const styles = {
             width: '17rem',
         },
         titleAndDate: {
-            fontSize: '1rem',
+            fontSize: '0.9rem',
         },
     },
 }

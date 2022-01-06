@@ -37,6 +37,7 @@ export const styles = {
         }
     },
     description: {
+        textAlign: 'center',
         fontFamily: ['Prompt'],
         fontSize: '1rem',
         fontWeight: '500',
