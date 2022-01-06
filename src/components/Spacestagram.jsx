@@ -2,7 +2,8 @@ import { Button, Grid, Typography } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import React, { useState } from 'react'
 import { styles } from '../styleObjects/Spacestagram';
-import ApodCard from './ApodCard';
+import ApodContent from './ApodContent';
+import MarsContent from './MarsContent';
 
 const useStyle = makeStyles(styles);
 
@@ -50,9 +51,22 @@ const Spacestagram = () => {
                     </Button>
                 </Grid>
                 {console.log(content, isApodOrMars, 'JEJEJE')}
-                {isApodOrMars && (
-                    <ApodCard content={content} />
-                )}
+                {isApodOrMars ?
+                    isApodOrMars === 'Apod' ?
+                        (
+                            <ApodContent content={content} />
+                        )
+                        :
+                        (
+                            <Grid className={classes.marsContentContainer}>
+                                {content?.photos?.map((imageContent) => (
+                                    <MarsContent imageContent={imageContent} />
+                                ))}
+                            </Grid>
+                        )
+                    :
+                    ''
+                }
             </Grid>
         </Grid>
     );
