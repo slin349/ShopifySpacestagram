@@ -3,7 +3,7 @@ export const styles = {
         display: 'flex',
         flexDirection: 'column',
         margin: '0 auto',
-        height: ({ buttonClicked }) => buttonClicked ? '100%' : '100vh',
+        minHeight: '100vh',
         maxWidth: '100rem',
         backgroundColor: '#EDEDED',
         justifyContent: 'center',
@@ -63,5 +63,25 @@ export const styles = {
         margin: '1rem',
         paddingRight: '1rem',
         marginBottom: '1rem',
+    },
+    likeButton: {
+        border: '0.1rem solid grey',
+        margin: '0.5rem 0rem 1rem 1rem',
+        color: 'black',
+        width: '6rem',
+        fontWeight: '600',
+    },
+    icon: {
+        fontSize: '1.5rem',
+        marginLeft: '0.25rem',
+        color: '#008060',
+    },
+    filledHeartIcon: {
+        fontSize: '1.5rem',
+        marginLeft: '0.25rem',
+        color: '#008060',
+    },
+    snackNotification: {
+        backgroundColor: '#008060',
     }
 };
