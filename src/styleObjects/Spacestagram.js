@@ -41,4 +41,22 @@ export const styles = {
         flexWrap: 'wrap',
         justifyContent: 'center',
     },
+    '@media (max-width: 900px)': {
+        buttonContainer: {
+            display: 'flex',
+            flexDirection: 'column',
+        },
+    },
+    '@media (max-width: 550px)': {
+        title: {
+            fontSize: '2.5rem',
+        },
+        subtitle: {
+            fontSize: '1rem',
+        },
+        buttonText: {
+            fontSize: '0.75rem',
+            width: '20rem'
+        }
+    }
 };

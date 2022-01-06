@@ -45,5 +45,26 @@ export const styles = {
     },
     snackNotification: {
         backgroundColor: '#008060',
-    }
+    },
+    '@media (max-width: 900px)': {
+        apodCard: {
+            width: '30rem',
+        },
+    },
+    '@media (max-width: 550px)': {
+        apodCard: {
+            width: '22rem',
+        },
+        titleAndDate: {
+            fontSize: '1.25rem',
+        },
+    },
+    '@media (max-width: 400px)': {
+        apodCard: {
+            width: '17rem',
+        },
+        titleAndDate: {
+            fontSize: '1rem',
+        },
+    },
 }
