@@ -50,6 +50,12 @@ const Spacestagram = () => {
                         Mars Rover Photos
                     </Button>
                 </Grid>
+                {isApodOrMars === 'Apod' && (
+                    <Typography className={classes.description}>This is the Astronomy Picture of the Day, fetched from NASA's APOD API</Typography>
+                )}
+                {isApodOrMars === 'Mars' && (
+                    <Typography className={classes.description}>These are pictures taken from the Mars Rover which are fetched from NASA's Mars Rover Photos API</Typography>
+                )}
                 {console.log(content, isApodOrMars, 'JEJEJE')}
                 {isApodOrMars ?
                     isApodOrMars === 'Apod' ?

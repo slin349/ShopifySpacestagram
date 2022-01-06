@@ -36,6 +36,11 @@ export const styles = {
             boxShadow: '0rem 0.5rem 2.5rem 0 rgb(0 0 0 / 25%)',
         }
     },
+    description: {
+        fontFamily: ['Prompt'],
+        fontSize: '1rem',
+        fontWeight: '500',
+    },
     marsContentContainer: {
         display: 'flex',
         flexWrap: 'wrap',
