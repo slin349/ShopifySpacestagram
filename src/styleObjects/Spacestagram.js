@@ -45,6 +45,7 @@ export const styles = {
     marsContentContainer: {
         display: 'flex',
         flexWrap: 'wrap',
+        width: '100%',
         justifyContent: 'center',
     },
     '@media (max-width: 900px)': {
