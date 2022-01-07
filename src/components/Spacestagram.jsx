@@ -41,7 +41,7 @@ const Spacestagram = () => {
     }
 
     return (
-        <Grid container direction='column'>
+        <Grid container direction='column' className={classes.pageContainer}>
             <Grid item xs={10} className={classes.contentContainer}>
                 <Typography className={classes.title}>Spacestagram</Typography>
                 <Typography className={classes.subtitle}>Brought to you by NASA's APIs</Typography>

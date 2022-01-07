@@ -1,4 +1,7 @@
 export const styles = {
+    pageContainer: {
+        width: '100%',
+    },
     contentContainer: {
         display: 'flex',
         flexDirection: 'column',
@@ -41,6 +44,7 @@ export const styles = {
         fontFamily: ['Prompt'],
         fontSize: '1rem',
         fontWeight: '500',
+        padding: '1rem',
     },
     marsContentContainer: {
         display: 'flex',
