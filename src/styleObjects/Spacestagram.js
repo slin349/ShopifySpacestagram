@@ -1,7 +1,4 @@
 export const styles = {
-    pageContainer: {
-        width: '100%',
-    },
     contentContainer: {
         display: 'flex',
         flexDirection: 'column',
@@ -50,6 +47,7 @@ export const styles = {
         display: 'flex',
         flexWrap: 'wrap',
         width: '100%',
+        maxWidth: '100rem',
         justifyContent: 'center',
     },
     '@media (max-width: 900px)': {
