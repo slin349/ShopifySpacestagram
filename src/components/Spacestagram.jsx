@@ -76,9 +76,11 @@ const Spacestagram = () => {
                     ''
                 }
             </Grid>
-            <Grid item>
-                <Footer />
-            </Grid>
+            {isApodOrMars && (
+                <Grid item>
+                    <Footer />
+                </Grid>
+            )}
         </Grid>
     );
 };

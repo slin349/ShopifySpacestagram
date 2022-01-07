@@ -1,5 +1,6 @@
 export const styles = {
     contentContainer: {
+        width: '100%',
         display: 'flex',
         flexDirection: 'column',
         margin: '0 auto',
@@ -22,7 +23,7 @@ export const styles = {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        marginTop: '2rem',
+        margin: '2rem 1rem 0rem 1rem',
     },
     buttonText: {
         backgroundColor: '#008060',
@@ -67,5 +68,11 @@ export const styles = {
             fontSize: '0.75rem',
             width: '20rem'
         }
-    }
+    },
+    '@media (max-width: 400px)': {
+        buttonText: {
+            fontSize: '0.55rem',
+            width: '15rem',
+        },
+    },
 };
